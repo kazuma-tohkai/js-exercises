@@ -1,0 +1,2 @@
+- ドル記号($) : `jQuery`
+- アンダースコア(\_) : `Undersocore.js`
