@@ -7,4 +7,10 @@ describe("fib", () => {
   it("75", () => {
     expect(fib(75)).toBe(2111485077978050);
   });
+  it("0", () => {
+    expect(fib(0)).toBe(1);
+  });
+  it("1", () => {
+    expect(fib(1)).toBe(1);
+  });
 });

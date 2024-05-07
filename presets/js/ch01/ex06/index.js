@@ -1,7 +1,7 @@
 export function fib(x) {
   let f0 = 0;
   let f1 = 1;
-  let f2;
+  let f2 = 1;
   let n = 1;
   while (n < x) {
     f2 = f1 + f0;
