@@ -1,0 +1,2 @@
+- 無限ループが発生してしまう引数
+  - 例：`let hoge = 0; while (true) hoge `= 42;
