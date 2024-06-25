@@ -1,0 +1,2 @@
+- nest.nm()は関数宣言文で定義しているので、関数は外側のthis(obj)を継承しない。関数を呼び出したオブジェクト(nest)がthisの値になる。よって、consoleは「false true」が出力される
+- nest.arrow()はアロー関数で宣言しているので、外側のthis(obj)の値を継承する。consoleは「true false」が出力される。

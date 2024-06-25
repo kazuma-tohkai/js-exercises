@@ -18,6 +18,7 @@ const mathAve = data.reduce(
   data[0].math
 );
 console.log(mathAve); // 530
+console.log(data.reduce((x, y) => x + y.math, 0));
 
 // クラスAのchemistryの平均点
 const dataClassA = data.filter((x) => x.class === "A");
