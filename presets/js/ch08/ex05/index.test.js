@@ -2,6 +2,9 @@ import { sequenceToObject } from "./index.js";
 
 describe("可変長変数を受取オブジェクトを返却する", () => {
   it("成功ケース", () => {
+    expect(sequenceToObject("a", 1, "b", 2)).toEqual({ a: 1, b: 2 });
+  });
+  it("成功ケース_スプレッド演算子（以下のテストはすべてスプレッド演算子）", () => {
     const arr = ["a", 1, "b", 2];
     expect(sequenceToObject(...arr)).toEqual({ a: 1, b: 2 });
   });

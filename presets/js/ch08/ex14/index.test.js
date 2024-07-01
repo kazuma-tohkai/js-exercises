@@ -1,7 +1,7 @@
 import { any, catching } from "./index.js";
 
 describe("any", () => {
-  it("引数が0かどうか確認する関数", () => {
+  it("引数に1つでも0でない数字があれば、trueを返す関数", () => {
     const isNonZero = any(
       (n) => n > 0,
       (n) => n < 0

@@ -1,5 +1,6 @@
 // nが少数を含む場合の計算は実装できていない
 
+// 再帰
 export const powerWithRecursive = (x, n) => {
   // n=0の場合は0を返す
   if (n === 0) return 1;
@@ -12,6 +13,8 @@ export const powerWithRecursive = (x, n) => {
 
   return result;
 };
+
+// ループ
 export const powerWithLoop = (x, n) => {
   // n=0の場合は0を返す
   if (n === 0) return 1;

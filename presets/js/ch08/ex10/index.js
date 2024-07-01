@@ -5,5 +5,4 @@ export function addMyCall(f) {
   f.myCall = function (obj, ...arg) {
     return f.bind(obj)(...arg);
   };
-  return f;
 }
