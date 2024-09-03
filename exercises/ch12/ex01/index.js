@@ -41,20 +41,31 @@ function* counterGen(max) {
 }
 
 const a = counterIter(3);
-console.log(a.hoge());
+// console.log(a[Symbol.iterator]());
+// console.log(a.hoge());
 // for (const x of a) {
 //   console.log(x);
 // }
+for (const x of a) {
+  if (x === 2) throw new Error("Error");
+  console.log(x);
+}
 // console.log(a[Symbol.iterator]());
-// console.log(a.next());
-// console.log(a.next());
-// console.log(a.next());
+// const iterator = a[Symbol.iterator]();
+// iterator.next();
+// iterator.next();
+// iterator.next();
+// iterator.next();
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
 
 // const a = counterGen(-1);
 // console.log(a[Symbol.iterator]());
 // console.log(a.next());
-// console.log(a.throw("Error"));
-// console.log(a.return(5));
+// console.log(iterator.throw("Error"));
+// console.log(iterator.return(5));
 // console.log(a.next());
 // console.log(a.next());
 // console.log(a.next());
