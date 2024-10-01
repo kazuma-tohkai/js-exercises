@@ -1,4 +1,4 @@
 {
-  "name": "Taro",
-  "age": 50
+  "name": "Taro<script>alert('Hello!')</script>",
+  "age": "<a href='http://localhost:3000/ch15.01-03/ex08/index2.html?q=<script>index.js</script>'>50<a/>"
 }
