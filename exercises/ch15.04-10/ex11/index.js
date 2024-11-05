@@ -43,6 +43,16 @@ form.addEventListener("submit", (e) => {
   renderTodos(todos);
 });
 
+// hashchangeはURLのフラグメントが変化したら発火するイベント
 window.addEventListener("hashchange", () => {
   // ここを実装してね
+  if (window.location.hash === "#/completed") {
+    renderTodos(todos.filter((todo) => todo.completed));
+  }
+  if (window.location.hash === "#/active") {
+    renderTodos(todos.filter((todo) => !todo.completed));
+  }
+  if (window.location.hash === "#/") {
+    renderTodos(todos);
+  }
 });

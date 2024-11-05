@@ -1,3 +1,112 @@
-.completed {
+/* Windwos XP風のデザイン */
+
+/* 全体の背景をXP風のグラデーションにする */
+/* 入力フォームとto-doリストを横並びに、フレックスコンテナの主軸の幅の中央に揃える */
+body {
+  font-family: "Tahoma", sans-serif;
+  background: linear-gradient(135deg, #3a6ea5, #87b3d1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 中央のToDoアプリのウィンドウ */
+/* box-shadowで影付きにして立体感を出し、XP風にしている */
+form,
+#todo-list {
+  width: 300px;
+  background-color: #e8e8e8;
+  border: 2px solid #7a8ca3;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 3px;
+}
+
+/* フォームのスタイル */
+#new-todo-form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+/* inputタグのスタイル */
+/* border-radiusで角の丸みを2pxに */
+#new-todo {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #7a8ca3;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+#new-todo:focus {
+  outline: none;
+  border: 1px solid #3a6ea5;
+}
+
+/* Addボタンのスタイル */
+/* box-shadowで影付きにするときに、left & topとright & bottomで色を変えている */
+button {
+  background-color: #d6d3ce;
+  border: 1px solid #7a8ca3;
+  padding: 5px 10px;
+  color: #000;
+  margin-left: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow:
+    1px 1px #fff inset,
+    -1px -1px #555 inset;
+}
+
+/* Addボタンにマウスホバーしたときの色を設定 */
+button:hover {
+  background-color: #e0dfdc;
+}
+
+/* ToDoリスト項目のスタイル */
+/* 箇条書きの記号は表示しない */
+#todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* 各項目にbackground-colorを設定して、カード状に見えるように */
+#todo-list li {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border: 1px solid #c3c3c3;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+/* チェックボックスのスタイル */
+/* 右側のマージンを10pxに */
+.toggle {
+  margin-right: 10px;
+}
+
+/* 完了したToDoのスタイル */
+/* 取り消し線をつけて、文字色を薄く */
+.completed .content {
   text-decoration: line-through;
+  color: #6b6b6b;
+}
+
+/* 削除ボタンのスタイル */
+.destroy {
+  margin-left: auto;
+  background: #c0c0c0;
+  border: 1px solid #888;
+  border-radius: 2px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+/* 削除ボタンにマウスホバーしたときの色を設定 */
+.destroy:hover {
+  background: #a8a8a8;
 }
