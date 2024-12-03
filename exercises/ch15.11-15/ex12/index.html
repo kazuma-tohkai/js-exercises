@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <title>OneDriveファイルアップロード</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script type="module" src="/ch15.11-15/ex12/index.js"></script>
+    <!-- styleはChatGPTに生成してもらった -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 400px;
+        text-align: center;
+      }
+
+      .container h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #555;
+      }
+
+      .form-group input {
+        width: calc(100% - 20px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .form-group input[type="file"] {
+        padding: 5px;
+      }
+
+      button {
+        background-color: #0078d4;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #005ea1;
+      }
+
+      button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      .note {
+        font-size: 0.9em;
+        color: #777;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>OneDriveファイルアップロード</h1>
+      <div class="form-group">
+        <label for="token">アクセストークン</label>
+        <input
+          id="token"
+          type="text"
+          placeholder="Graph APIのアクセストークンを入力"
+        />
+      </div>
+      <div class="form-group">
+        <label for="file">アップロードするファイル</label>
+        <input id="file" type="file" />
+      </div>
+      <button type="submit" id="upload">アップロード</button>
+      <p class="note">※ トークンはGraph Explorerから取得してください。</p>
+    </div>
+  </body>
+</html>

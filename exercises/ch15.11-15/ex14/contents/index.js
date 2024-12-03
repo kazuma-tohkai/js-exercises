@@ -13,4 +13,13 @@ async function getMessageFromServer() {
   messageContainer.appendChild(messageElement);
 
   // TODO: ここにサーバーとのやり取り等を実装しなさい
+  const chat = new EventSource("/message");
+  chat.addEventListener("message", (event) => {
+    button.disabled = true;
+    messageElement.textContent += JSON.parse(event.data).value;
+  });
+
+  fetch("/message").catch((err) => {
+    console.error(err);
+  });
 }
