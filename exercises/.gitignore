@@ -1,2 +1,11 @@
 node_modules
 test-results
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/my-app
+/lib/ollama
+/ollama.tgz
+ollama
+/playwright.config.cjs
+npx
