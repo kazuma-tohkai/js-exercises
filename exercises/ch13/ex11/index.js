@@ -23,7 +23,7 @@ export function retryWithExponentialBackoff(func, maxRetry) {
           }
           // func の返り値が失敗した場合は一定時間後にリトライ
           const interval = 2 ** (retryCount - 1) * 1000;
-          wait(interval).then(retryFunc());
+          wait(interval).then(retryFunc);
         });
     }
 
