@@ -1,0 +1,9 @@
+{
+  "plugins": ["flowtype"],
+  "extends": ["eslint:recommended", "plugin:flowtype/recommended"],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
+}
